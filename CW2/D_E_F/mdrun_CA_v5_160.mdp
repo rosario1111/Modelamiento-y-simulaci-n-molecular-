@@ -37,9 +37,9 @@ rvdw = 3.0 		; treatment of van der waals interactions (the LJ potential)
 ;if you know what you are doing feel free to decrease to 2.0 nm. If you have longer
 ;contacts, then of course increase these numbers. 
 
-coulombtype = PME 	; This tells gromacs to use the tables that we give it
-; instead of the standard interaction types  vdwtype = User 	
-; Periodic boundary conditions not needed if CoM motions removed pbc = no 	
+coulombtype = User 	; This tells gromacs to use the tables that we give it
+vdwtype = User      ; instead of the standard interaction types  vdwtype = User 	
+pbc = no            ; Periodic boundary conditions not needed if CoM motions removed pbc = no 	
 
 cutoff-scheme = group 
 table-extension = 50 	; (nm) required if using abc
@@ -78,4 +78,5 @@ pull-coord1-k           = 4         ; kJ mol^-1 nm^-2
 
 pull-nstxout            = 5000
 pull-nstfout            = 5000
+
 
